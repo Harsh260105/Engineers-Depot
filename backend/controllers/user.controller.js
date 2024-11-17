@@ -14,9 +14,15 @@ export const register = async (req, res) => {
                 success: false
             });
         };
-        const file = req.file;
-        const fileUri = getDataUri(file);
-        const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
+
+        let cloudResponse = 'https://res.cloudinary.com/di0r0mqpp/image/upload/v1731691422/default-avatar-profile-icon-of-social-media-user-photo-image-vector_q9qz68.jpg';
+        
+        if (req.file) {
+            const file = req.file;
+            const fileUri = getDataUri(file);
+            let uploadResponse = await cloudinary.uploader.upload(fileUri.content);
+            cloudResponse = uploadResponse.secure_url;
+        }
 
         const user = await User.findOne({ email });
         if (user) {
@@ -34,7 +40,7 @@ export const register = async (req, res) => {
             password: hashedPassword,
             role,
             profile:{
-                profilePhoto:cloudResponse.secure_url,
+                profilePhoto:cloudResponse,
             }
         });
 
@@ -118,7 +124,10 @@ export const updateProfile = async (req, res) => {
         const file = req.file;
         // cloudinary ayega idhar
         const fileUri = getDataUri(file);
-        const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
+        const cloudResponse = await cloudinary.uploader.upload(fileUri.content, {
+            resource_type: "auto", // Allows Cloudinary to detect and set the correct resource type
+            folder: "resumes", // Optional: Place uploads in a specific folder
+        });
 
         
         let skillsArray;
@@ -146,6 +155,8 @@ export const updateProfile = async (req, res) => {
             user.profile.resume = cloudResponse.secure_url 
             user.profile.resumeOriginalName = file.originalname 
         }
+
+        console.log(cloudResponse.secure_url);
 
         await user.save();
 

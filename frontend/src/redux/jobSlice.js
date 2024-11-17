@@ -9,6 +9,7 @@ const jobSlice = createSlice({
         searchJobByText:"",
         allAppliedJobs:[],
         searchedQuery:"",
+        salaryFilter:"",  // new field for salary filter
     },
     reducers:{
         // actions
@@ -29,7 +30,10 @@ const jobSlice = createSlice({
         },
         setSearchedQuery:(state,action) => {
             state.searchedQuery = action.payload;
-        }
+        },
+        setSalaryFilter: (state, action) => {
+            state.salaryFilter = action.payload;
+        },
     }
 });
 export const {
@@ -38,6 +42,7 @@ export const {
     setAllAdminJobs,
     setSearchJobByText, 
     setAllAppliedJobs,
-    setSearchedQuery
+    setSearchedQuery,
+    setSalaryFilter
 } = jobSlice.actions;
 export default jobSlice.reducer;
