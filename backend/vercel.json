@@ -7,4 +7,3 @@
       { "src": "/api/(.*)", "dest": "index.js" }
     ]
   }
-  
