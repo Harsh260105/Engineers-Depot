@@ -36,7 +36,7 @@ app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
 
 // Default Route (For testing)
-app.get("/", (req, res) => {
+app.get("/api/v1/", (req, res) => {
   res.send("Backend is running on Vercel 🚀");
 });
 
