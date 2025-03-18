@@ -11,7 +11,7 @@ import applicationRoute from "./routes/application.route.js";
 dotenv.config();
 const app = express();
 
-// Connect to DB (Ensure it runs once)
+// Connect to DB
 connectDB();
 
 // Middleware
@@ -26,5 +26,10 @@ app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
 
-// Vercel requires an exported function
+// Default Route (For testing)
+app.get("/", (req, res) => {
+  res.send("Backend is running on Vercel 🚀");
+});
+
+// Export for Vercel
 export default app;
