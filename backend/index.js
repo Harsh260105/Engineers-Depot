@@ -20,12 +20,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://engineer-s-depot.vercel.app", // Your frontend domain
-    credentials: true, // Allow cookies and authentication headers
-    methods: "GET,POST,PUT,DELETE", // Allowed methods
-    allowedHeaders: "Content-Type,Authorization", // Allowed headers
+    origin: "https://engineer-s-depot.vercel.app",
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"], 
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
 
 
 // API Routes
