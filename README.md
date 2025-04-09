@@ -38,7 +38,7 @@ Traditional job search platforms face several challenges, including:
 ## Installation & Setup
 1. Clone the repository:
    ```sh
-   https://github.com/hemaxpatel/Engineers-Depot.git
+   https://github.com/Harsh260105/Engineers-Depot.git
    ```
 2. Install dependencies for backend:
    ```sh
