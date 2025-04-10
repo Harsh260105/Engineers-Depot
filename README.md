@@ -23,12 +23,14 @@ Traditional job search platforms face several challenges, including:
 - **User Authentication** – Secure login for job seekers and recruiters using JWT authentication.
 - **Admin Dashboard** – Manage job postings, users, and reported issues.
 - **Application Tracking** – Job seekers can track their applications in one place.
+- **Responsive Design** – Seamlessly accessible across all devices with a mobile-first user interface for enhanced usability.
+
 
 ## Tech Stack
 - **Frontend:** React.js, React Router, Tailwind CSS  
 - **Backend:** Node.js, Express.js  
 - **Database:** MongoDB, Mongoose ORM  
-- **Authentication:** JWT, Cookies  
+- **Authentication:** JWT, Cookies
 
 ## Developers
 - [Harsh Patel](https://github.com/Harsh260105)
