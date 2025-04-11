@@ -30,7 +30,7 @@ Traditional job search platforms face several challenges, including:
 - **Database:** MongoDB, Mongoose ORM  
 - **Authentication:** JWT, Cookies  
 
-## Developers
+## Project Team
 - [Harsh Patel](https://github.com/Harsh260105)
 - [Hemax Patel](https://github.com/hemaxpatel)
 - [Het Patel](https://github.com/hetpatel203)
