@@ -1,6 +1,6 @@
 # Engineer's Depot - Job Portal Web App
 
-### Website URL: https://engineer-s-depot.vercel.app/
+### Check it out: https://engineer-s-depot.vercel.app/
 
 ![Home Page](https://github.com/user-attachments/assets/3a4ff628-b059-4a22-a47b-e86c0a3ad06f)
 ![a](https://github.com/user-attachments/assets/f10f66a0-b9e5-4812-a0a6-1f2f2de608d9)
